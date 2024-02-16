@@ -7,13 +7,15 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:musicidia/main.dart';
+import 'package:musicidia/core/config/app_config.dart';
+import 'package:musicidia/main/main_dev.dart';
+import 'package:musicidia/main/main_prod.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+    await tester.pumpWidget(
+        appConfig.isProduction ? const MyAppProd() : const MyAppDev());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
