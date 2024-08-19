@@ -9,16 +9,12 @@ class BaseApi {
   /// Wrapper for API calls for handling errors at common place
   /// instead of parsing it in calling Widgets.
   Stream<Response<T>> callApi<T>(Future<Response<T>> future) {
-    print("CALLEING CALL API");
     return Stream.fromFuture(future).map((response) {
-      print("================================response $response");
       final error = _getErrorObject(response);
       if (error != null) throw error;
 
       return response;
     }).onErrorResume((error, stackTrace) {
-      print("================================error $error");
-
       // If error is DioError i.e http exception, we
       // should parse the exact message instead of
       // returning the HTTP Status code and standard message.

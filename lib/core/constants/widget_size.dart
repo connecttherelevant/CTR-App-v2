@@ -1,6 +1,7 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //height
+double k1Height = ScreenUtil().setHeight(1.0);
 double k2Height = ScreenUtil().setHeight(2.0);
 double k3Height = ScreenUtil().setHeight(3.0);
 double k4Height = ScreenUtil().setHeight(4.0);
@@ -32,6 +33,7 @@ double k150Height = ScreenUtil().setHeight(150.0);
 double k200Height = ScreenUtil().setHeight(200.0);
 
 //width
+double k1Width = ScreenUtil().setWidth(1.0);
 double k2Width = ScreenUtil().setWidth(2.0);
 double k3Width = ScreenUtil().setWidth(3.0);
 double k4Width = ScreenUtil().setWidth(4.0);
@@ -57,6 +59,7 @@ double k23Width = ScreenUtil().setWidth(23.0);
 double k24Width = ScreenUtil().setWidth(24.0);
 double k25Width = ScreenUtil().setWidth(25.0);
 double k50Width = ScreenUtil().setWidth(50.0);
+double k60Width = ScreenUtil().setWidth(60.0);
 double k100Width = ScreenUtil().setWidth(100.0);
 double k150Width = ScreenUtil().setWidth(150.0);
 double k200Width = ScreenUtil().setWidth(200.0);

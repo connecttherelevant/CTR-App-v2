@@ -27,6 +27,7 @@ class AppWelcomeScreenState extends BaseStatefulWidget<AppWelcomeScreen> {
         child: PrimaryButton(
           margin: const EdgeInsets.only(bottom: 24),
           width: ScreenUtil().setHeight(335.0),
+          disable: false,
           onClick: () => {pushNamed(Routes.loginScreen)},
           height: k50Height,
           content: "Get Started",

@@ -7,6 +7,7 @@ class PrimaryButton extends StatelessWidget {
   final String content;
   final VoidCallback onClick;
   final EdgeInsetsGeometry? margin;
+  final bool disable;
 
   const PrimaryButton({
     Key? key,
@@ -15,6 +16,7 @@ class PrimaryButton extends StatelessWidget {
     required this.onClick,
     required this.content,
     this.margin,
+    required this.disable,
   }) : super(key: key);
 
   @override
@@ -24,7 +26,7 @@ class PrimaryButton extends StatelessWidget {
       width: width,
       height: height,
       decoration: BoxDecoration(
-        color: AppColors.primaryColor,
+        color: disable ? AppColors.disableBtnColor : AppColors.primaryColor,
         borderRadius: BorderRadius.circular(16),
       ),
       child: InkWell(
